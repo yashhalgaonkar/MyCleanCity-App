@@ -3,6 +3,7 @@ package com.theroboticsforum.sihapp;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
@@ -37,7 +38,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         mForgetPassword = findViewById(R.id.forgot_password_text_view);
         login_button_card_view = findViewById(R.id.login_button_card_view);
 
-        //add textWatcher
+        mLoginButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this , MainActivity.class));
+                finish();
+            }
+        });
 
 
 

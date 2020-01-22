@@ -13,4 +13,6 @@
     <string name="add_pick_up">Add Pick Up</string>
     <string name="plan_a_trip">Plan a Trip</string>
     <string name="exit">Exit</string>
+    <string name="view_map">View Map</string>
+    <string name="view_photos">View Photos</string>
 </resources>

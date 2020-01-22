@@ -8,12 +8,14 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridLayout;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
 
         mainGrid = findViewById(R.id.mainGrid);
         setClickEvent(mainGrid);
@@ -57,15 +60,20 @@ public class MainActivity extends AppCompatActivity {
                             {
                                 case 0:
                                     //pick up points
+                                    startActivity(new Intent(MainActivity.this , PickUpActivity.class));
+                                    finish();
                                     break;
                                 case 1:
                                     //add pick up
+                                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
                                     break;
                                 case 2:
                                     //plan a trip
+                                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
                                     break;
                                 case 3:
                                     //signout
+                                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
                                     break;
                             }
                         }
@@ -73,8 +81,5 @@ public class MainActivity extends AppCompatActivity {
             );
         }
     }
-
-
-
 
 }
