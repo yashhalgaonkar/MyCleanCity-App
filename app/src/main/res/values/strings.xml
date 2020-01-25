@@ -14,5 +14,13 @@
     <string name="plan_a_trip">Plan a Trip</string>
     <string name="exit">Exit</string>
     <string name="view_map">View Map</string>
-    <string name="view_photos">View Photos</string>
+    <string name="main_Add">Main Address</string>
+    <string name="sub_add">Sub Address</string>
+    <string name="add">Add</string>
+    <string name="upload_photos">Upload</string>
+    <string name="view_photos">View Photo</string>
+    <string name="choose">Choose</string>
+    <string name="latitude">Latitude: </string>
+    <string name="longitude">Longitude: </string>
+    <string name="api_key">AIzaSyAwSm9kasNS6uGmH-dIWmixnywo_LpikOs</string>
 </resources>

@@ -27,7 +27,7 @@
             <ImageView
                 android:id="@+id/smart_iv"
                 android:layout_width="150dp"
-                android:layout_height="200dp"
+                android:layout_height="160dp"
                 android:layout_gravity="center"
                 android:src="@drawable/smart" />
 
@@ -70,13 +70,13 @@
             android:layout_columnWeight="1"
             android:layout_marginLeft="16dp"
             android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="12dp"
             app:cardElevation="3dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/selector">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -85,8 +85,8 @@
 
                     <ImageView
                         android:id="@+id/image_01"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/trash" />
@@ -121,13 +121,13 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="12dp"
             app:cardElevation="3dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/selector">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -136,8 +136,8 @@
 
                     <ImageView
                         android:id="@+id/image_02"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/car" />
@@ -172,13 +172,13 @@
             android:layout_columnWeight="1"
             android:layout_marginLeft="16dp"
             android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="12dp"
             app:cardElevation="3dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/selector">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -187,8 +187,8 @@
 
                     <ImageView
                         android:id="@+id/image_03"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/track" />
@@ -223,13 +223,13 @@
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/colorWhite"
             app:cardCornerRadius="12dp"
             app:cardElevation="3dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/selector">
+                android:layout_height="match_parent">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -238,8 +238,8 @@
 
                     <ImageView
                         android:id="@+id/image_04"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:layout_centerInParent="true"
                         android:layout_gravity="center_horizontal"
                         android:src="@drawable/exit" />
@@ -271,13 +271,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginHorizontal="16dp"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="8dp"
         android:layout_marginBottom="4dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
 
         <RelativeLayout
-            android:background="@drawable/selector"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
@@ -292,7 +292,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:text="A project by- "
+                    android:text="Created By-"
                     android:textColor="@color/colorTitle"
                     android:textSize="14dp"
                     android:textStyle="bold" />
@@ -302,7 +302,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:text="Just Another Team"
-                    android:textColor="@color/colorAccent"
+                    android:textColor="@color/colorPrimary"
                     android:textSize="18dp"
                     android:textStyle="bold" />
 

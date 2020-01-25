@@ -19,12 +19,18 @@ import android.widget.Toast;
 import android.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
 
     //widgets
     private GridLayout mainGrid;
+
+    //firebase authetication
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
 
 
@@ -35,7 +41,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().hide();
+       // getSupportActionBar().hide();
+
+        setupFirebaseAuth();
 
         mainGrid = findViewById(R.id.mainGrid);
         setClickEvent(mainGrid);
@@ -61,11 +69,10 @@ public class MainActivity extends AppCompatActivity {
                                 case 0:
                                     //pick up points
                                     startActivity(new Intent(MainActivity.this , PickUpActivity.class));
-                                    finish();
                                     break;
                                 case 1:
                                     //add pick up
-                                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
+                                    startActivity(new Intent(MainActivity.this , AddPickUpActivity.class));
                                     break;
                                 case 2:
                                     //plan a trip
@@ -73,12 +80,62 @@ public class MainActivity extends AppCompatActivity {
                                     break;
                                 case 3:
                                     //signout
-                                    Toast.makeText(MainActivity.this, "clicked", Toast.LENGTH_SHORT).show();
+                                    signOut();
+                                    Toast.makeText(MainActivity.this, "Bye Bye", Toast.LENGTH_SHORT).show();
                                     break;
                             }
                         }
                     }
             );
+        }
+    }
+
+    //log out the current user
+    private void signOut() {
+        Log.d(TAG, "signOut: sigining out.");
+        FirebaseAuth.getInstance().signOut();
+        Toast.makeText(this, "Bye! Bye! ", Toast.LENGTH_SHORT).show();
+        Log.d(TAG, "signOut: User signed out");
+        startActivity(new Intent(this, LoginActivity.class));
+    }
+
+    private void setupFirebaseAuth() {
+        Log.d(TAG, "setupFirebaseAuth: started.");
+        FirebaseApp.initializeApp(this);
+
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                FirebaseUser user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    //user is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                    //currentUserEmail = user.getEmail();
+
+                } else {
+                    //user is signed out... revert to login page
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                    //Toast.makeText(MainActivity.this, "Please Login", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        };
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        FirebaseAuth.getInstance().addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if (mAuthListener != null) {
+            FirebaseAuth.getInstance().removeAuthStateListener(mAuthListener);
         }
     }
 

@@ -24,6 +24,7 @@
             android:layout_centerInParent="true">
 
             <ImageView
+                android:elevation="8dp"
                 android:layout_centerHorizontal="true"
                 android:id="@+id/pick_up_iv"
                 android:layout_width="100dp"
@@ -48,13 +49,24 @@
 
     </RelativeLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:id="@+id/recycler_view"
-        android:layout_marginHorizontal="16dp"
-        android:layout_marginBottom="8dp"
-        android:layout_weight="7"
-        android:layout_height="0dp"/>
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_height="0dp"
+        android:layout_weight="7">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:id="@+id/recycler_view"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="8dp"
+            android:layout_weight="7"
+            android:layout_height="0dp"/>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
 
 
 

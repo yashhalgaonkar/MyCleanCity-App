@@ -1,51 +1,52 @@
 package com.theroboticsforum.sihapp;
 
+import android.location.Location;
+
+import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.firestore.ServerTimestamp;
+import com.google.type.Date;
+
+import java.sql.Timestamp;
+import java.util.Map;
+
 public class Points {
     private String mainAdd;
     private String subAdd;
-    private double rating;
-    private String date, time;
-    private String latitude;
-    private String longitude;
+    private Double rating;
+
 
     public Points()
     {
         //empty constructor
     }
 
-    public Points(String mainAdd, String subAdd, double rating, String date, String time) {
+    public Points(String mainAdd, String subAdd, Double rating) {
         this.mainAdd = mainAdd;
         this.subAdd = subAdd;
         this.rating = rating;
-        this.date = date;
-        this.time = time;
     }
 
     public String getMainAdd() {
         return mainAdd;
     }
 
+    public void setMainAdd(String mainAdd) {
+        this.mainAdd = mainAdd;
+    }
+
     public String getSubAdd() {
         return subAdd;
     }
 
-    public double getRating() {
+    public void setSubAdd(String subAdd) {
+        this.subAdd = subAdd;
+    }
+
+    public Double getRating() {
         return rating;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public String getLatitude() {
-        return latitude;
-    }
-
-    public String getLongitude() {
-        return longitude;
+    public void setRating(Double rating) {
+        this.rating = rating;
     }
 }

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1035953673683",
+    "firebase_url": "https://sih-app-bd194.firebaseio.com",
+    "project_id": "sih-app-bd194",
+    "storage_bucket": "sih-app-bd194.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1035953673683:android:20f662d249b77f3045cb26",
+        "android_client_info": {
+          "package_name": "com.theroboticsforum.sihapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1035953673683-bqqs4djrsh7pgm57juni1qkd76ckudvh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.theroboticsforum.sihapp",
+            "certificate_hash": "bf376e0843fef2c4accbcc82b0f5009c8c10f9e3"
+          }
+        },
+        {
+          "client_id": "1035953673683-nbmcfh08c7dgtehinkjmo7hfj6icbr80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBskhIfrzEflODoDIVzGZf0uRtUhAUWsa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1035953673683-nbmcfh08c7dgtehinkjmo7hfj6icbr80.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
